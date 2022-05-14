@@ -1,0 +1,162 @@
+body{
+  --color-success: #4caf50;
+  --color-error: #f44336;
+  --color-warning: #ff9800;
+  --color-info: #2196f3;
+}
+
+
+#toast{
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  z-index: 9999;
+}
+
+.toast {
+  max-width: 450px;
+  min-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 20px 0;
+  border-left: 4px solid;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+  transform: all linear 0.3s;
+}
+
+@keyframes slideInLeft {
+  from{
+    opacity: 0;
+    transform: translateX(calc(100% + 32px) );
+  }
+  to{
+    opacity: 1;
+    transform: 0;
+  }
+}
+
+@keyframes fadeOut {
+  to{
+    opacity: 0;
+  }
+}
+
+.toast + .toast {
+  margin-top: 20px;
+}
+
+.toast__icon {
+  font-size: 24px;
+}
+
+.toast__icon,
+.toast__close {
+  padding: 0 16px;
+}
+
+.toast__body {
+  flex-grow: 1;
+}
+
+.toast__title{
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.toast__message {
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.toast__close {
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+}
+
+/* Style color with status */
+.toast--success {
+  border-color: var(--color-success);
+}
+
+.toast--success .toast__icon{
+  color: var(--color-success);
+}
+
+.toast--warning {
+  border-color: var(--color-warning);
+}
+
+.toast--warning .toast__icon{
+  color: var(--color-warning);
+}
+
+.toast--error {
+  border-color: var(--color-error);
+}
+
+.toast--error .toast__icon{
+  color: var(--color-error);
+}
+
+.toast--info {
+  border-color: var(--color-info);
+}
+
+.toast--info .toast__icon{
+  color: var(--color-info);
+}
+
+
+/* Btn action */
+.btn__action{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%, -50%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 2px;
+}
+
+.btn + .btn{
+  margin-left: 8px;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--success{
+  background-color: var(--color-success);
+  color: #fff;
+}
+
+.btn--error{
+  background-color: var(--color-error);
+  color: #fff;
+}
+
+.btn--warning{
+  background-color: var(--color-warning);
+  color: #fff;
+}
+
+.btn--info{
+  background-color: var(--color-info);
+  color: #fff;
+}
